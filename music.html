@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lennektro's Place - Music</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+  <link rel="stylesheet" href="music.css">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+  <script id="navbar-script" navbar-active="music" src="navbar.js"></script>
+  <div id="site-wrapper">
+    <div id=banner>
+      <div></div>
+      <img src="res/music_banner.jpg" />
+    </div>
+    <div class="top-seperator">
+    </div>
+    <div id="main-body">
+    </div>
+    <div id="work-display" class="wd-hidden">
+      <button id="wd-close-btn" onclick="closeWorkDisplay()"><img src="res/close_cross.svg" /></button>
+      <div id="wd-top-container">
+        <img id="wd-img" />
+        <div id="wd-tops">
+          <h2 id="wd-title"></h2>
+          <a id="wd-yt-btn" class="wd-ebtn wd-hidden"><img src="https://www.svgrepo.com/show/13671/youtube.svg"
+              width="26px" />&nbsp;Youtube&nbsp;<img src="res/external_link.svg" width="20px" /></a>
+          <a id="wd-whyp-btn" class="wd-ebtn wd-hidden"><img src="https://cdn.whyp.it/static/logo_dark.svg"
+              width="26px" />&nbsp;Whyp&nbsp;<img src="res/external_link.svg" width="20px" /></a>
+        </div>
+      </div>
+      <div id="wd-bottom-container">
+        <p id="wd-desc"></p>
+      </div>
+    </div>
+  </div>
+  <script src="music.js"></script>
+</body>
+
+</html>

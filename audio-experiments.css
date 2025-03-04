@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
+}
+
+#main-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: 1.5s fadeInUp;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.big-logo {
+  width: 30vh;
+}
+
+h1 {
+  font-family: "Montserrat";
+  color: white;
+  text-align: center;
+  margin: 20px;
+}
+
+h2 {
+  font-family: "Montserrat";
+  color: white;
+}
+
+@media (orientation: portrait) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}

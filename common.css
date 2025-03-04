@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+}
+
+@media print {
+  * {
+    visibility: collapse !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}

@@ -1,0 +1,287 @@
+@keyframes bodyIn {
+  0% {
+    background-color: #000000;
+  }
+
+  100% {
+    background-color: #AAAAAA;
+  }
+}
+
+body {
+  animation: 1.5s bodyIn;
+  background-color: #AAAAAA;
+  background-blend-mode: multiply;
+  background-image: url('res/far2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box {
+  background-color: #000000CC;
+  border: 2px solid white;
+  padding: 8px 22px 16px;
+  margin: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 40rem;
+}
+
+.tb-hor {
+  display: flex;
+  align-items: center;
+}
+
+.tb-ver {
+  display: flex;
+  flex-direction: column;
+}
+
+.tb-title {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 36px;
+  margin: 4px;
+}
+
+.tb-subtitle {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.tb-text {
+  color: white;
+  font-family: "Raleway";
+  font-size: 18px;
+  margin: 4px;
+}
+
+.tb-hi {
+  margin: 0px 4px !important;
+}
+
+.tb-hib {
+  margin: 0px 4px 4px !important;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes aboutBoxIn {
+  0% {
+    max-width: 0;
+    max-height: 10rem;
+  }
+
+  100% {
+    max-width: 40rem;
+    max-height: 40rem;
+  }
+}
+
+.about-box {
+  animation: 1.5s aboutBoxIn;
+}
+
+@keyframes titleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.title-in {
+  animation: 1.5s titleIn;
+}
+
+.switch-button img {
+  filter: invert(0%);
+  transition: 500ms;
+}
+
+.switch-button:hover img {
+  filter: invert(100%);
+  transition: 500ms;
+}
+
+.switch-button {
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 8px;
+  transition: 600ms;
+}
+
+.switch-button:hover {
+  background-color: black;
+}
+
+@keyframes switchButtonIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.switch-button-in {
+  animation: 1s switchButtonIn;
+}
+
+@keyframes switchButtonDown {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.switch-button-down {
+  animation: 1s switchButtonDown;
+  transform: rotate(-180deg);
+}
+
+@keyframes switchButtonUp {
+  0% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.switch-button-up {
+  animation: 1s switchButtonUp;
+}
+
+.nvis {
+  width: 0;
+  height: 0;
+  visibility: collapse !important;
+}
+
+@keyframes aboutBoxSlideOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.about-box-slide-out {
+  animation: 500ms aboutBoxSlideOut;
+}
+
+@keyframes secBoxSlideIn {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sec-box-slide-in {
+  animation: 500ms secBoxSlideIn;
+}
+
+@keyframes aboutBoxSlideIn {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.about-box-slide-in {
+  animation: 500ms aboutBoxSlideIn;
+}
+
+@keyframes secBoxSlideOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.sec-box-slide-out {
+  animation: 500ms secBoxSlideOut;
+}
+
+.yt-video {
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  margin: 4px;
+}
+
+@media (orientation: portrait) {
+  .text-box {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .tb-title {
+    font-size: 80px;
+  }
+
+  .tb-subtitle {
+    font-size: 50px;
+  }
+
+  .tb-text {
+    font-size: 42px;
+  }
+
+  .switch-button img {
+    width: 60px;
+  }
+
+  #tb-a-title-container img {
+    width: 360px;
+  }
+}

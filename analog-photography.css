@@ -1,0 +1,47 @@
+body {
+  background-color: #141414;
+}
+
+.navbar {
+  position: fixed !important;
+  z-index: 2;
+}
+
+#page-wrapper {
+  position: absolute;
+  top: 14%;
+  display: flex;
+  width: 100%;
+}
+
+#main-body {
+  display: flex;
+  flex-wrap: wrap row;
+  width: 100%;
+}
+
+.grow {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+}
+
+.pic {
+  width: 100%;
+}
+
+.pic img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (orientation: portrait) {
+  .grow {
+    width: 100%;
+  }
+
+  #main-body {
+    flex-direction: column;
+  }
+}

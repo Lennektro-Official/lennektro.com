@@ -1,0 +1,59 @@
+// create navbar
+const navbar_index = "index.html";
+const navbar_music = "music.html";
+const navbar_gallery = "analog-photography.html";
+const navbar_audio = "audio-experiments.html";
+const navbar_whyp = "https://whyp.it/users/25331/lennektro/collections";
+const navbar_youtube = "https://www.youtube.com/@Lennektro-Music";
+
+const icon_size = 26;
+
+document.write(`
+  <div class="navbar-container">
+    <div class="navbar">
+      <a class="navbar-logo-link" href="${navbar_index}"><img class="navbar-logo" src="res/LennektroLogoHalo.svg" /></a>
+      <a id="navbar-music" class="navbar-btn navbar-music" href="${navbar_music}"><img src="res/music_logo.svg" width="${icon_size}px" />&nbsp;Music</a>
+      <a id="navbar-gallery" class="navbar-btn navbar-gallery" href="${navbar_gallery}"><img src="res/gallery_logo.svg" width="${icon_size}px" />&nbsp;Analog Photography</a>
+      <a id="navbar-audio" class="navbar-btn navbar-audio" href="${navbar_audio}"><img src="res/audio_experiments_logo.svg" width="${icon_size}px" />&nbsp;Audio Experiments</a>
+      <div id="navbar-socials" class="navbar-socials">
+        <div id="navbar-socials-content" class="navbar-socials-content">
+          <a class="navbar-btn navbar-whyp" href="${navbar_whyp}"><img
+              src="https://cdn.whyp.it/static/logo_dark.svg" width="${icon_size}px" />&nbsp;Whyp&nbsp;<img src="res/external_link.svg" width="20px" /></a>
+          <a class="navbar-btn navbar-yt" href="${navbar_youtube}"><img
+              src="https://www.svgrepo.com/show/13671/youtube.svg" width="${icon_size}px" />&nbsp;Youtube&nbsp;<img src="res/external_link.svg" width="20px" /></a>
+        </div>
+        <button onclick="navbarSocialsToggle()" id="navbar-socials-arrow" class="navbar-btn navbar-socials-arrow"><img
+            src="res/socials_arrow.svg" width="25px" /></button>
+      </div>
+    </div>
+  </div>    
+`);
+
+// mark active element
+var navbar_active = "navbar-" + document.getElementById("navbar-script").getAttribute("navbar-active");
+var navbar_active_element = document.getElementById(navbar_active);
+
+if(!!navbar_active_element) {
+  navbar_active_element.classList.add(navbar_active + "-active");  
+}
+
+// handle socials expandable
+var navbar_socials = document.getElementById("navbar-socials");
+var navbar_socials_content = document.getElementById("navbar-socials-content");
+var navbar_socials_arrow = document.getElementById("navbar-socials-arrow");
+
+var socialsToggled = false;
+
+function navbarSocialsToggle() {
+  if(socialsToggled) {
+    navbar_socials.classList.remove("navbar-socials-active");
+    navbar_socials_content.classList.remove("navbar-socials-content-active");
+    navbar_socials_arrow.classList.remove("navbar-socials-arrow-active");
+  } else {
+    navbar_socials.classList.add("navbar-socials-active");
+    navbar_socials_content.classList.add("navbar-socials-content-active");
+    navbar_socials_arrow.classList.add("navbar-socials-arrow-active");
+  }
+
+  socialsToggled = !socialsToggled;
+}
