@@ -11,7 +11,7 @@ fetch("./content/gallery.json")
         crow++;
         if(crow > 3) crow = 1;
 
-        grow.insertAdjacentHTML("beforeend", `<a class="pic" href="${img}"><img loading="lazy" src="${img}" /></a>`);
+        grow.insertAdjacentHTML("beforeend", `<a class="pic" href="${img}"><h1>Loading Image...</h1><img loading="lazy" src="${img}" /></a>`);
       }
     }
   });
