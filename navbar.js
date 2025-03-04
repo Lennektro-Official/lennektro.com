@@ -1,8 +1,8 @@
 // create navbar
-const navbar_index = "index.html";
-const navbar_music = "music.html";
-const navbar_gallery = "analog-photography.html";
-const navbar_audio = "audio-experiments.html";
+const navbar_index = "https://lennektro.com/";
+const navbar_music = "https://lennektro.com/music";
+const navbar_gallery = "https://lennektro.com/analog-photography";
+const navbar_audio = "https://lennektro.com/audio-experiments";
 const navbar_whyp = "https://whyp.it/users/25331/lennektro/collections";
 const navbar_youtube = "https://www.youtube.com/@Lennektro-Music";
 
