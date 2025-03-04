@@ -36,6 +36,13 @@ body {
   height: auto;
 }
 
+.pic h1 {
+  position: absolute;
+  color: white;
+  font-family: "Montserrat";
+  z-index: -500;
+}
+
 @media (orientation: portrait) {
   .grow {
     width: 100%;
