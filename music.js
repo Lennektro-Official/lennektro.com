@@ -23,12 +23,12 @@ fetch('./content/music.json')
           wd_img.setAttribute("src", work.cover);
           wd_title.innerHTML = work.title;
           wd_desc.innerHTML = work.desc;
-          if(work.whyp != "") {
+          if(work.whyp != null) {
             wd_whyp_btn.classList.remove("wd-hidden");
             wd_whyp_btn.setAttribute("href", work.whyp);
           } else if(!wd_whyp_btn.classList.contains("wd-hidden"))
             wd_whyp_btn.classList.add("wd-hidden");
-          if(work.yt != "") {
+          if(work.yt != null) {
             wd_yt_btn.classList.remove("wd-hidden");
             wd_yt_btn.setAttribute("href", work.yt);
           } else if(!wd_yt_btn.classList.contains("wd-hidden"))
