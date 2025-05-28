@@ -8,13 +8,14 @@ const navbar_youtube = "https://www.youtube.com/@Lennektro-Music";
 
 const icon_size = 26;
 
+// Temporaily Unused Navbar Button: <a id="navbar-audio" class="navbar-btn navbar-audio" href="${navbar_audio}"><img src="res/audio_experiments_logo.svg" width="${icon_size}px" />&nbsp;Audio Experiments</a>
+
 document.write(`
   <div class="navbar-container">
     <div class="navbar">
       <a class="navbar-logo-link" href="${navbar_index}"><img class="navbar-logo" src="res/LennektroLogoHalo.svg" /></a>
       <a id="navbar-music" class="navbar-btn navbar-music" href="${navbar_music}"><img src="res/music_logo.svg" width="${icon_size}px" />&nbsp;Music</a>
       <a id="navbar-gallery" class="navbar-btn navbar-gallery" href="${navbar_gallery}"><img src="res/gallery_logo.svg" width="${icon_size}px" />&nbsp;Analog Photography</a>
-      <a id="navbar-audio" class="navbar-btn navbar-audio" href="${navbar_audio}"><img src="res/audio_experiments_logo.svg" width="${icon_size}px" />&nbsp;Audio Experiments</a>
       <div id="navbar-socials" class="navbar-socials">
         <div id="navbar-socials-content" class="navbar-socials-content">
           <a class="navbar-btn navbar-whyp" href="${navbar_whyp}"><img
