@@ -2,13 +2,10 @@
 const navbar_index = "https://lennektro.com/";
 const navbar_music = "https://lennektro.com/music";
 const navbar_gallery = "https://lennektro.com/analog-photography";
-const navbar_audio = "https://lennektro.com/audio-experiments";
 const navbar_whyp = "https://whyp.it/users/25331/lennektro/collections";
 const navbar_youtube = "https://www.youtube.com/@Lennektro-Music";
 
 const icon_size = 26;
-
-// Temporaily Unused Navbar Button: <a id="navbar-audio" class="navbar-btn navbar-audio" href="${navbar_audio}"><img src="res/audio_experiments_logo.svg" width="${icon_size}px" />&nbsp;Audio Experiments</a>
 
 document.write(`
   <div class="navbar-container">

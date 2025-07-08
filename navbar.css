@@ -141,20 +141,6 @@
   animation: navbarActive 3s 1s infinite;
 }
 
-.navbar-audio {
-  border-color: #C652CC;
-}
-
-.navbar-audio:hover {
-  background: #C652CC;
-  transform: rotate(-1deg);
-}
-
-.navbar-audio-active {
-  background: #C652CC66;
-  animation: navbarActive 3s 1s infinite;
-}
-
 @media (orientation: portrait) {
   .navbar-logo {
     width: 120px;
