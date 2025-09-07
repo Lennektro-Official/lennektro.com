@@ -22,9 +22,7 @@ fetch("./content/gallery.json")
         crow++;
         if(crow > 3) crow = 1;
 
-        let imghtm = `<a title="${date}" class="pic" href="${img}"><h1>Loading Image...</h1><img id="${imid}" src="${thumb}" /></a>`;
-        if(imid > 11) imghtm = `<a title="${date}" class="pic" href="${img}"><h1>Loading Image...</h1><img class="lazy" id="${imid}" data-src="${thumb}" /></a>`;
-        grow.insertAdjacentHTML("beforeend", imghtm);
+        grow.insertAdjacentHTML("beforeend", imid < 12 ? `<a title="${date}" class="pic" href="${img}"><img id="${imid}" src="${thumb}" /></a>` : `<a title="${date}" class="pic" href="${img}"><h1 id="loadtext${imid}">Loading Image...</h1><img class="lazy" id="${imid}" data-src="${thumb}" /></a>`);
         imid++;   
       }
     }
@@ -36,8 +34,11 @@ fetch("./content/gallery.json")
         if(image.getBoundingClientRect().top <= window.innerHeight && image.getBoundingClientRect().bottom >= 0 && getComputedStyle(image).display !== "none") {
           let previmg = document.getElementById(image.id - 3);
           if(!previmg.classList.contains("lazy")) {
+            image.addEventListener('load', function() {
+              image.classList.remove("lazy");
+              document.getElementById("loadtext" + image.id).remove();
+            });
             image.src = image.dataset.src;
-            image.classList.remove("lazy");
           }
         }
       });
