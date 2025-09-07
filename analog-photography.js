@@ -36,7 +36,8 @@ fetch("./content/gallery.json")
           if(!previmg.classList.contains("lazy")) {
             image.addEventListener('load', function() {
               image.classList.remove("lazy");
-              document.getElementById("loadtext" + image.id).remove();
+              let loadtext = document.getElementById("loadtext" + image.id);
+              if(loadtext != null) loadtext.remove();
             });
             image.src = image.dataset.src;
           }
