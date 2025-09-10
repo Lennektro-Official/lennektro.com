@@ -1,4 +1,4 @@
-const main_body = document.getElementById("main-body");
+const main_body = document.getElementById("music-script").parentElement;
 
 const work_display = document.getElementById("work-display");
 const wd_img = document.getElementById("wd-img");
@@ -11,14 +11,13 @@ fetch('./content/music.json')
   .then(res => res.json())
   .then(data => {
     for(let year in data) {
+    	if(year == "spotlight") continue;
       main_body.insertAdjacentHTML('beforeend', `<div class="year-wrapper"><div class="year-title"><h1>${year}</h1></div><div id="${year}" class="year-container"></div></div>`);
       let year_container = document.getElementById(year);
       for(let i in data[year]) {
         let work = data[year][i];
-        let work_id = work.title.replace(" ", "_");
-        let trackSpec = "Single";
-        if(work.tracks != -1) trackSpec = work.tracks + " Tracks";
-        year_container.insertAdjacentHTML('beforeend', `<button id="${work_id}" class="work"><img src="${work.cover}" /><h2>${work.title}</h2><p>${trackSpec}</p></button>`);
+        let work_id = work.title.replaceAll(" ", "_");
+        year_container.insertAdjacentHTML('beforeend', `<button id="${work_id}" class="work"><img src="${work.cover}" /><h2>${work.title}</h2><p>${work.tracks == -1 ? "Single" : work.tracks + " Tracks"}</p></button>`);
         document.getElementById(work_id).addEventListener("click", function() {
           wd_img.setAttribute("src", work.cover);
           wd_title.innerHTML = work.title;

@@ -7,7 +7,7 @@ const navbar_youtube = "https://www.youtube.com/@Lennektro-Music";
 
 const icon_size = 26;
 
-document.write(`
+document.getElementById("navbar-script").parentElement.insertAdjacentHTML('beforeend', `
   <div class="navbar-container">
     <div class="navbar">
       <a class="navbar-logo-link" href="${navbar_index}"><img class="navbar-logo" src="res/LennektroLogoHalo.svg" /></a>

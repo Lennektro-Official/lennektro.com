@@ -28,6 +28,7 @@ body {
 
 .pic {
   width: 100%;
+  cursor: default;
 }
 
 .pic img {

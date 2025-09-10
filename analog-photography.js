@@ -31,7 +31,7 @@ fetch("./content/gallery.json")
 
     const lazyLoad = () => {
       lazyImages.forEach((image) => {
-        if(image.getBoundingClientRect().top <= window.innerHeight && image.getBoundingClientRect().bottom >= 0 && getComputedStyle(image).display !== "none") {
+        if(image.getBoundingClientRect().top <= window.innerHeight && getComputedStyle(image).display !== "none") {
           let previmg = document.getElementById(image.id - 3);
           if(!previmg.classList.contains("lazy")) {
             image.addEventListener('load', function() {

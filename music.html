@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="music.css">
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="music_spotlight.css">
 </head>
 
 <body>
@@ -31,8 +32,6 @@
       <img src="res/music_banner.jpg" />
     </div>
     <div class="top-seperator">
-    </div>
-    <div id="main-body">
     </div>
     <div id="work-display" class="wd-hidden">
       <button id="wd-close-btn" onclick="closeWorkDisplay()"><img src="res/close_cross.svg" /></button>
@@ -49,9 +48,16 @@
       <div id="wd-bottom-container">
         <p id="wd-desc"></p>
       </div>
+    </div>    
+    <div id="main-body">
+    	<div>
+      	<script id="music-spotlight-script" src="music_spotlight.js"></script>
+      </div>
+    	<div id="works-container">
+      	<script id="music-script" src="music.js"></script>
+      </div>
     </div>
   </div>
-  <script src="music.js"></script>
 </body>
 
 </html>

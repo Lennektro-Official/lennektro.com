@@ -48,6 +48,7 @@
 
 .navbar-socials-arrow {
   border: none !important;
+  cursor: pointer;
 }
 
 .navbar-socials-arrow-active {
