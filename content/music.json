@@ -1,10 +1,9 @@
 {
   "spotlight": {
     "list": [
-      ["2025", "Point in Time"],
-      ["2025", "Out of Touch"],
       ["2025", "Quantum Branches"],
-      ["2024", "Lost in my World"]
+      ["2024", "Lost in my World"],
+      ["2025", "Out of Touch"]
     ]
   },
   "2025": [
