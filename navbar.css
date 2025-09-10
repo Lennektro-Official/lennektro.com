@@ -154,4 +154,27 @@
   .navbar-btn img {
     width: 48px;
   }
+
+  #rotate-device-message {
+    visibility: visible !important;
+  }
+}
+
+#rotate-device-message {
+  visibility: collapse;
+  position: fixed;
+  background-color: red;
+  margin: 5px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+}
+
+#rotate-device-message h2 {
+  font-family: "Railway";
+  font-size: 60px;
+  color: white;
+  margin: 5px;
 }
