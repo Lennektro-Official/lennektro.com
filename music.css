@@ -105,6 +105,7 @@ body {
   background: transparent;
   margin: 20px;
   width: 250px;
+  cursor: pointer;
 }
 
 .work img {

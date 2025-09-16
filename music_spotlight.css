@@ -74,6 +74,7 @@
   background: transparent;
   width: 60px;
   transition: 300ms;
+  cursor: pointer;
 }
 
 .spotlight_work img {
