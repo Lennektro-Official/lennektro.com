@@ -4,7 +4,6 @@ const tb_a_text_container = document.getElementById("tb-a-text-container");
 const switch_button = document.getElementById("switch-button");
 
 const about_box = document.getElementById("about-box");
-const sec_box = document.getElementById("sec-box");
 
 // fade in title of about box after about box startup animation
 setTimeout(function() {
@@ -27,10 +26,12 @@ var aboutTextCount = Array(3).fill(0);
 function writeAboutText(n) {
   if(aboutTextCount[n] >= aboutText[n].length) {
     if(n < 2) writeAboutText(n + 1);
+    /*
     else {
       switch_button.classList.remove("nvis");
       switch_button.classList.add("switch-button-in");
     }
+    */
     return;
   }
   document.getElementById("tb-a-text" + n).innerHTML += aboutText[n].charAt(aboutTextCount[n]);
@@ -42,44 +43,3 @@ setTimeout(function() {
   tb_a_text_container.classList.remove("hidden");
   writeAboutText(0);
 }, 3200);
-
-// handle content switch
-var switching = false;
-var switched = false;
-
-function switchContent() {
-  if(switching) return;
-  switching = true;
-
-  if(!switched) {
-    switch_button.classList.remove("switch-button-up");
-    switch_button.classList.add("switch-button-down");
-    about_box.classList.remove("about-box-slide-in");
-    about_box.classList.add("about-box-slide-out");
-    setTimeout(function() {
-      about_box.classList.add("nvis");
-      sec_box.classList.remove("nvis");
-      sec_box.classList.remove("sec-box-slide-out");
-      sec_box.classList.add("sec-box-slide-in");
-      setTimeout(function() {
-        switching = false;
-      }, 600);
-    }, 490);
-  } else {
-    switch_button.classList.remove("switch-button-down");
-    switch_button.classList.add("switch-button-up");
-    sec_box.classList.remove("sec-box-slide-in");
-    sec_box.classList.add("sec-box-slide-out");
-    setTimeout(function() {
-      sec_box.classList.add("nvis");
-      about_box.classList.remove("nvis");
-      about_box.classList.remove("about-box-slide-out");
-      about_box.classList.add("about-box-slide-in");
-      setTimeout(function() {
-        switching = false;
-      }, 600);
-    }, 490);
-  }
-
-  switched = !switched;
-}

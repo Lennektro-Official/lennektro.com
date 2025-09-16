@@ -44,7 +44,7 @@
   justify-content: center;
   width: 100%;
   margin: 20px;
-  flex-flow: nowrap;
+  flex-flow: wrap;
 }
 
 .spotlight-arrow {
@@ -168,4 +168,52 @@
   font-size: 18px;
   color: white;
   width: 40%;
+}
+
+@media (orientation: portrait) {
+  #music-spotlight-title h1 {
+    font-size: 60px;
+  }
+
+  #music-spotlight-title p {
+    font-size: 26px;
+  }
+
+  #spcw-title {
+    font-size: 34px;
+  }
+
+  #spcw-desc {
+    font-size: 26px;
+    margin: 40px;
+  }
+
+  .spcw-ebtn {
+    font-size: 26px;
+  }
+
+  #spcw-img {
+    height: 220px;
+    margin: 40px;
+  }
+
+  #music-spotlight-current {
+    height: 400px;
+  }
+
+  .spotlight_work {
+    width: 100px;
+  }
+
+  .spotlight_work img {
+    width: 90px;
+  }
+
+  .spotlight-arrow img {
+    width: 50px;
+  }
+
+  #spcw-side-container {
+    margin-top: -100px;
+  }
 }

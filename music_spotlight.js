@@ -79,12 +79,12 @@ fetch('./content/music.json')
     listContainer.insertAdjacentHTML('beforeend', `<button id="spotlight-right-arrow" class="spotlight-arrow"><img src="res/socials_arrow.svg" width="25px" /></button>`);
 
     document.getElementById("spotlight-left-arrow").addEventListener("click", function() {
-      if(currentlySelectedSpotlightWork <= 0) return;
+      if(currentlySelectedSpotlightWork <= 0) currentlySelectedSpotlightWork = fetchedWorks.length;
       currentlySelectedSpotlightWork--;
       setCurrentWork(fetchedWorks[currentlySelectedSpotlightWork], currentlySelectedSpotlightWork);
     });
     document.getElementById("spotlight-right-arrow").addEventListener("click", function() {
-      if(currentlySelectedSpotlightWork >= fetchedWorks.length - 1) return;
+      if(currentlySelectedSpotlightWork >= fetchedWorks.length - 1) currentlySelectedSpotlightWork = -1;
       currentlySelectedSpotlightWork++;
       setCurrentWork(fetchedWorks[currentlySelectedSpotlightWork], currentlySelectedSpotlightWork);
     });

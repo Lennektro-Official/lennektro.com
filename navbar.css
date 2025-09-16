@@ -26,6 +26,8 @@
   padding: 2px 10px;
   animation: 1s navbarIn;
   flex-wrap: wrap;
+  position: fixed;
+  z-index: 2;
 }
 
 .navbar-socials {

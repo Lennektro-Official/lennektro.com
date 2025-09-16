@@ -2,11 +2,6 @@ body {
   background-color: #141414;
 }
 
-.navbar {
-  position: fixed !important;
-  z-index: 2;
-}
-
 #page-wrapper {
   position: absolute;
   top: 14%;
