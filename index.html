@@ -24,22 +24,18 @@
   <link rel="stylesheet" href="music_spotlight.css">
 </head>
 
-<body>
+<body class="bg-about-this-place">
   <script id="navbar-script" navbar-active="" src="navbar.js"></script>
   <div id="main-body">
-    <div id="about-box" class="text-box about-box">
+    <div id="text-box" class="text-box text-box-in">
       <div id="tb-a-title-container" class="tb-hor hidden">
-        <h1 class="tb-title">About This Place</h1>
-        <img src="res/LennektroLogoHalo.svg" width="140px" />
+        <h1 id="tb-title-h1" class="tb-title"></h1>
+        <img id="tb-title-img" width="140px" />
       </div>
-      <div id="tb-a-text-container" class="tb-ver hidden">
-        <p id="tb-a-text0" class="tb-text tb-hi"></p>
-        <p id="tb-a-text1" class="tb-text tb-hib"></p>
-        <p id="tb-a-text2" class="tb-text"></p>
-      </div>
+      <div id="tb-a-text-container" class="tb-ver hidden"></div>
     </div>
     <div class="switch-button-container">
-      <button id="switch-button" class="switch-button nvis" onclick=""><img src="res/switch_arrow.svg"
+      <button id="switch-button" class="switch-button switch-button-down nvis" onclick="onSwitchClick()"><img src="res/icons/switch_arrow.svg"
           width="30px" /></button>
     </div>
   </div>

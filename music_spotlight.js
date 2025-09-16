@@ -53,9 +53,9 @@ fetch('./content/music.json')
           <div id="spcw-side-container">
             <h2 id="spcw-title"></h2>
             <a id="spcw-yt-btn" class="spcw-ebtn spcw-hidden"><img src="https://www.svgrepo.com/show/13671/youtube.svg"
-              width="26px" />&nbsp;Youtube&nbsp;<img src="res/external_link.svg" width="20px" /></a>
+              width="26px" />&nbsp;Youtube&nbsp;<img src="res/icons/external_link.svg" width="20px" /></a>
             <a id="spcw-whyp-btn" class="spcw-ebtn spcw-hidden"><img src="https://cdn.whyp.it/static/logo_dark.svg"
-              width="26px" />&nbsp;Whyp&nbsp;<img src="res/external_link.svg" width="20px" /></a>
+              width="26px" />&nbsp;Whyp&nbsp;<img src="res/icons/external_link.svg" width="20px" /></a>
           </div>          
           <p id="spcw-desc"></p>
         </div>
@@ -65,7 +65,7 @@ fetch('./content/music.json')
 
     let fetchedWorks = [];
     let listContainer = document.getElementById("music-spotlight-list");
-    listContainer.insertAdjacentHTML('beforeend', `<button id="spotlight-left-arrow" class="spotlight-arrow"><img src="res/socials_arrow.svg" width="25px" /></button>`);
+    listContainer.insertAdjacentHTML('beforeend', `<button id="spotlight-left-arrow" class="spotlight-arrow"><img src="res/icons/nav_arrow.svg" width="25px" /></button>`);
     for(let i in data.spotlight.list) {
       let workA = data.spotlight.list[i];
       let work = getRelease(workA[0], workA[1], data);
@@ -76,7 +76,7 @@ fetch('./content/music.json')
         setCurrentWork(work, i);
       });
     }
-    listContainer.insertAdjacentHTML('beforeend', `<button id="spotlight-right-arrow" class="spotlight-arrow"><img src="res/socials_arrow.svg" width="25px" /></button>`);
+    listContainer.insertAdjacentHTML('beforeend', `<button id="spotlight-right-arrow" class="spotlight-arrow"><img src="res/icons/nav_arrow.svg" width="25px" /></button>`);
 
     document.getElementById("spotlight-left-arrow").addEventListener("click", function() {
       if(currentlySelectedSpotlightWork <= 0) currentlySelectedSpotlightWork = fetchedWorks.length;

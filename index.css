@@ -12,12 +12,55 @@ body {
   animation: 1.5s bodyIn;
   background-color: #AAAAAA;
   background-blend-mode: multiply;
-  background-image: url('res/far2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
+}
+
+.bg-about-this-place {
+  background-image: url('res/index_backgrounds/about_this_place.jpg');
+}
+
+.bg-music {
+  background-image: url('res/index_backgrounds/music.jpg');
+}
+
+.bg-photography {
+  background-image: url('res/index_backgrounds/photography.jpg');
+}
+
+.bg-black {
+  background-color: #000000 !important;
+}
+
+@keyframes bgFadeOut {
+  0% {
+    background-color: #AAAAAA;
+  }
+
+  100% {
+    background-color: #000000;
+  }
+}
+
+.bg-fade-out {
+  animation: 250ms bgFadeOut;
+}
+
+@keyframes bgFadeIn {
+  0% {
+    background-color: #000000;
+  }
+
+  100% {
+    background-color: #AAAAAA;
+  }
+}
+
+.bg-fade-in {
+  animation: 250ms bgFadeIn;
 }
 
 #main-body {
@@ -72,19 +115,11 @@ body {
   margin: 4px;
 }
 
-.tb-hi {
-  margin: 0px 4px !important;
-}
-
-.tb-hib {
-  margin: 0px 4px 4px !important;
-}
-
 .hidden {
   opacity: 0;
 }
 
-@keyframes aboutBoxIn {
+@keyframes textBoxIn {
   0% {
     max-width: 0;
     max-height: 10rem;
@@ -96,8 +131,8 @@ body {
   }
 }
 
-.about-box {
-  animation: 1.5s aboutBoxIn;
+.text-box-in {
+  animation: 1.5s textBoxIn;
 }
 
 @keyframes titleIn {
@@ -134,6 +169,7 @@ body {
   padding: 8px;
   margin: 8px;
   transition: 600ms;
+  cursor: pointer;
 }
 
 .switch-button:hover {
@@ -154,10 +190,57 @@ body {
   animation: 1s switchButtonIn;
 }
 
+@keyframes switchButtonUp {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.switch-button-up {
+  animation: 1s switchButtonUp;
+  transform: rotate(180deg);
+}
+
+@keyframes switchButtonDown {
+  0% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.switch-button-down {
+  animation: 1s switchButtonDown;
+}
+
 .nvis {
   width: 0;
   height: 0;
   visibility: collapse !important;
+}
+
+@keyframes textSwitchAnim {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opcaity: 1;
+  }
+}
+
+.textSwitchAnim {
+  animation: 500ms textSwitchAnim;
 }
 
 @media (orientation: portrait) {

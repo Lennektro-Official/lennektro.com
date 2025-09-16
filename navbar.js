@@ -11,17 +11,17 @@ document.getElementById("navbar-script").parentElement.insertAdjacentHTML('befor
   <div class="navbar-container">
     <div class="navbar">
       <a class="navbar-logo-link" href="${navbar_index}"><img class="navbar-logo" src="res/LennektroLogoHalo.svg" /></a>
-      <a id="navbar-music" class="navbar-btn navbar-music" href="${navbar_music}"><img src="res/music_logo.svg" width="${icon_size}px" />&nbsp;Music</a>
-      <a id="navbar-gallery" class="navbar-btn navbar-gallery" href="${navbar_gallery}"><img src="res/gallery_logo.svg" width="${icon_size}px" />&nbsp;Analog Photography</a>
+      <a id="navbar-music" class="navbar-btn navbar-music" href="${navbar_music}"><img src="res/navbar_icons/music_logo.svg" width="${icon_size}px" />&nbsp;Music</a>
+      <a id="navbar-gallery" class="navbar-btn navbar-gallery" href="${navbar_gallery}"><img src="res/navbar_icons/gallery_logo.svg" width="${icon_size}px" />&nbsp;Analog Photography</a>
       <div id="navbar-socials" class="navbar-socials">
         <div id="navbar-socials-content" class="navbar-socials-content">
           <a class="navbar-btn navbar-whyp" href="${navbar_whyp}"><img
-              src="https://cdn.whyp.it/static/logo_dark.svg" width="${icon_size}px" />&nbsp;Whyp&nbsp;<img src="res/external_link.svg" width="20px" /></a>
+              src="https://cdn.whyp.it/static/logo_dark.svg" width="${icon_size}px" />&nbsp;Whyp&nbsp;<img src="res/icons/external_link.svg" width="20px" /></a>
           <a class="navbar-btn navbar-yt" href="${navbar_youtube}"><img
-              src="https://www.svgrepo.com/show/13671/youtube.svg" width="${icon_size}px" />&nbsp;Youtube&nbsp;<img src="res/external_link.svg" width="20px" /></a>
+              src="https://www.svgrepo.com/show/13671/youtube.svg" width="${icon_size}px" />&nbsp;Youtube&nbsp;<img src="res/icons/external_link.svg" width="20px" /></a>
         </div>
         <button onclick="navbarSocialsToggle()" id="navbar-socials-arrow" class="navbar-btn navbar-socials-arrow"><img
-            src="res/socials_arrow.svg" width="25px" /></button>
+            src="res/icons/nav_arrow.svg" width="25px" /></button>
       </div>
     </div>
   </div>
