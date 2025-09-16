@@ -25,10 +25,13 @@ document.getElementById("navbar-script").parentElement.insertAdjacentHTML('befor
       </div>
     </div>
   </div>
+`);
+
+/*
   <button id="rotate-device-message" onclick="removeRotateMessage()">
     <h2>Please note that this site is best experienced on a desktop or tablet in landscape mode (tap this message to close it)</h2>
   </button>
-`);
+*/
 
 // mark active element
 var navbar_active = "navbar-" + document.getElementById("navbar-script").getAttribute("navbar-active");
@@ -59,10 +62,12 @@ function navbarSocialsToggle() {
   socialsToggled = !socialsToggled;
 }
 
+/*
 // rotate notice
 function removeRotateMessage() {
   document.getElementById("rotate-device-message").remove();
 }
+*/
 
 // cheesy fix to prevent navbar spacing issues on mobile devices when device orientation changes
 screen.orientation.addEventListener("change", () => {

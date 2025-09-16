@@ -155,11 +155,14 @@
     width: 48px;
   }
 
+/*
   #rotate-device-message {
     visibility: visible !important;
   }
+*/
 }
 
+/*
 #rotate-device-message {
   visibility: collapse;
   position: fixed;
@@ -178,3 +181,4 @@
   color: white;
   margin: 5px;
 }
+*/
