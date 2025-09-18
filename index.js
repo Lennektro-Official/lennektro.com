@@ -27,11 +27,11 @@ const aboutText = [
 ];
 
 const musicTextBg = "bg-music";
-const musicTextTitle = "Why I Make Music&nbsp;";
+const musicTextTitle = "Why I Make Music&nbsp;&nbsp;";
 const musicTextImg = "res/index_icons/music.svg";
 const musicText = [
-  "I view music as an extension of my language as it allows me to express feelings an emotions in a way that is just not possible to replicate with any other medium.",
-  "Although I view art as a form of communication and a medium to get into touch with other people, that isn't really the reason why I make music. I primarily make music for myself and to process certain experiences and feelings. I like to say that music is my emotional outlet, as I tend to struggle to process and express a lot of my emotions with other mediums. And if someone ends up liking the stuff I create, that's great, but not my main intent as I would continue to make music, even when it wouldn't reach anybody else except me. (Side Note: That doesn't mean that I don't enjoy to collab with some people from time to time.)",
+  "I view music as an extension of my language as it allows me to express feelings and emotions in a way that is just not possible to replicate with any other medium.",
+  "Although I view art as a form of communication and a medium to get into touch with other people, that's only partially why I make music. I primarily make music for myself and to process certain experiences and feelings. I like to say that music is my emotional outlet, as I tend to struggle to process and express a lot of my emotions with other mediums. And if someone ends up liking the stuff I create, that's great, but it doesn't matter to me how many people I reach with my music. I think I probably would also make music if nobody would listen to my music, but it is nice when you know that you moved something in someone, even when it's only one person.",
   "I personally believe that no matter what kind of art you create or what medium you use to express yourself, it's always important to stay true to yourself and to strive to make honest art, and not try to create what you think will appeal to other people. Because eventually the right people will find you. How many? Doesn't matter."
 ];
 
@@ -41,7 +41,7 @@ const photographyTextImg = "res/index_icons/photography.svg";
 const photographyText = [
   "There is just something about the feel and vibe of analog photography that digital photography just can't capture. It just feels in a way more authentic and more real and that is why I developed a passion for it.",
   "My main camera is an old Practica FX that I inherited from my grandpa that I never met, as he died before I was born. In a way using that camera is one of the few things that make me feel connected to him in some sense. I never met that person and I hardly know anything about him, only a few things I was told by my family, but I like that odd connection to him knowing he was also interested in photography.",
-  "And there is just a certain magic to capturing moments with a completly mechanic camera and the whole feel and haptics of it. It also just makes you consider a lot more what things you really want to photograph and therefore you end up with a lot more meaningful pictures. But I also was told that I have a good eye for photo motives."
+  "And there is just a certain magic to capturing moments with a completely mechanic camera and the whole feel and haptics of it. It also just makes you consider a lot more what things you really want to photograph and therefore you end up with a lot more meaningful pictures."
 ];
 
 // fill about text in text box with typing animation
