@@ -41,7 +41,7 @@ const photographyTextImg = "res/index_icons/photography.svg";
 const photographyText = [
   "There is just something about the feel and vibe of analog photography that digital photography just can't capture. It just feels in a way more authentic and more real and that is why I developed a passion for it.",
   "My main camera is an old Practica FX that I inherited from my grandpa that I never met, as he died before I was born. In a way using that camera is one of the few things that make me feel connected to him in some sense. I never met that person and I hardly know anything about him, only a few things I was told by my family, but I like that odd connection to him knowing he was also interested in photography.",
-  "And there is just a certain magic to capturing moments with a completely mechanic camera and the whole feel and haptics of it. It also just makes you consider a lot more what things you really want to photograph and therefore you end up with a lot more meaningful photos."
+  "And there is just a certain magic to capturing moments with a completely mechanical camera and the whole feel and haptics of it. It also just makes you consider a lot more what things you really want to photograph and therefore you end up with a lot more meaningful photos."
 ];
 
 // fill about text in text box with typing animation
@@ -53,12 +53,10 @@ var aboutTextCount = Array(aboutText.length).fill(0);
 function writeAboutText(n) {
   if(aboutTextCount[n] >= aboutText[n].length) {
     if(n < aboutText.length - 1) writeAboutText(n + 1);
-    /*
     else {
       switch_button.classList.remove("nvis");
       switch_button.classList.add("switch-button-in");
     }
-    */
     return;
   }
   if(aboutTextCount[n] === 0) tb_a_text_container.insertAdjacentHTML('beforeend', `<p id="tb-a-text${n}" class="tb-text"></p>`);
