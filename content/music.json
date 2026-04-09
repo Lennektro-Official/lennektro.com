@@ -9,6 +9,15 @@
       ["2024", "Fight for Faith"]
     ]
   },
+  "2026": [
+    {
+      "title": "Stargazer",
+      "cover": "https://cdn.whyp.it/5ae365c7-9acf-4688-8455-fa0ac2e46398.png",
+      "desc": "A small experimental track with some crazy drones and I just generally had a lot of fun with sound design stuff.",
+      "tracks": -1,
+      "whyp": "https://whyp.it/collections/7014/stargazer"
+    }
+  ],
   "2025": [
     {
       "title": "Orbits",
