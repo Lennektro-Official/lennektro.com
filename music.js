@@ -7,6 +7,8 @@ const wd_whyp_btn = document.getElementById("wd-whyp-btn");
 const wd_yt_btn = document.getElementById("wd-yt-btn");
 const wd_desc = document.getElementById("wd-desc");
 
+const urlParams = new URLSearchParams(window.location.search);
+
 fetch('./content/music.json')
   .then(res => res.json())
   .then(data => {
@@ -19,26 +21,47 @@ fetch('./content/music.json')
         let work_id = work.title.replaceAll(" ", "_");
         year_container.insertAdjacentHTML('beforeend', `<button id="${work_id}" class="work"><img src="${work.cover}" /><h2>${work.title}</h2><p>${work.tracks == -1 ? "Single" : work.tracks + " Tracks"}</p></button>`);
         document.getElementById(work_id).addEventListener("click", function() {
-          wd_img.setAttribute("src", work.cover);
-          wd_title.innerHTML = work.title;
-          wd_desc.innerHTML = work.desc;
-          if(work.whyp != null) {
-            wd_whyp_btn.classList.remove("wd-hidden");
-            wd_whyp_btn.setAttribute("href", work.whyp);
-          } else if(!wd_whyp_btn.classList.contains("wd-hidden"))
-            wd_whyp_btn.classList.add("wd-hidden");
-          if(work.yt != null) {
-            wd_yt_btn.classList.remove("wd-hidden");
-            wd_yt_btn.setAttribute("href", work.yt);
-          } else if(!wd_yt_btn.classList.contains("wd-hidden"))
-            wd_yt_btn.classList.add("wd-hidden");
-          if(!work_display.classList.contains("wd-hidden")) return;
-          work_display.classList.remove("wd-hidden");
-          work_display.classList.add("wd-fade-in");
+          openWorkDisplay(work, year);
         }, false);
       }
     }
+   
+    if(!urlParams.has("year") || !urlParams.has("work")) return;
+    let title = urlParams.get("work").replaceAll("_", " ");
+    let year = urlParams.get("year");
+    let year_container = data[year];
+    if(year_container == null) return;
+    for(let i in year_container) {
+      let work = year_container[i];
+      if(work.title === title) {
+        openWorkDisplay(work, year);
+        return;
+      }
+    }
   });
+
+function openWorkDisplay(work, year) {
+  wd_img.setAttribute("src", work.cover);
+  wd_title.innerHTML = work.title;
+  wd_desc.innerHTML = work.desc;
+  if(work.whyp != null) {
+    wd_whyp_btn.classList.remove("wd-hidden");
+    wd_whyp_btn.setAttribute("href", work.whyp);
+  } else if(!wd_whyp_btn.classList.contains("wd-hidden"))
+    wd_whyp_btn.classList.add("wd-hidden");
+  if(work.yt != null) {
+    wd_yt_btn.classList.remove("wd-hidden");
+    wd_yt_btn.setAttribute("href", work.yt);
+  } else if(!wd_yt_btn.classList.contains("wd-hidden"))
+    wd_yt_btn.classList.add("wd-hidden");
+  if(!work_display.classList.contains("wd-hidden")) return;
+  work_display.classList.remove("wd-hidden");
+  work_display.classList.add("wd-fade-in");
+  const url = new URL(window.location);
+  url.searchParams.set("year", year);
+  url.searchParams.set("work", work.title.replaceAll(" ", "_"));
+  window.history.replaceState({}, '', url);
+}
 
 function closeWorkDisplay() {
   if(work_display.classList.contains("wd-hidden")) return;
@@ -46,4 +69,8 @@ function closeWorkDisplay() {
   work_display.classList.remove("wd-fade-in");
   wd_whyp_btn.classList.add("wd-hidden");
   wd_yt_btn.classList.add("wd-hidden");
+  const url = new URL(window.location);
+  url.searchParams.delete("year");
+  url.searchParams.delete("work");
+  window.history.replaceState({}, '', url);
 }
